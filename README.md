@@ -15,8 +15,6 @@ studies/
       study.yaml
       surveys.csv
       counts.csv
-      coded_markers.csv
-      coverage_notes.csv
       README.md
       changelog.md
   private/
@@ -24,16 +22,14 @@ studies/
       ...
 ```
 
-Each folder represents a single curated study. The public/ directory contains data that can be shared, while private/ can be used locally for restricted datasets that should not be distributed.
+Each folder represents a single curated study. The public/ directory contains data that can be shared, while private/ can be used locally for restricted datasets that should not be distributed (ignored automatically by the .gitignore).
 
 Within each study folder:
 
 - study.yaml contains study-level metadata, including identifiers and references to the original data source
 - surveys.csv describes where and when samples were collected
 - counts.csv contains the aggregated genetic data, linking variant strings to the number of samples in which they were observed
-- coded_markers.csv records which genetic markers have been extracted for that study
-- coverage_notes.csv provides notes on sequencing coverage to support future data extension
-- README.md gives a human-readable summary of how the data were extracted and any important interpretation decisions
+- README.md provides a human-readable account of how the data were extracted, including key interpretation decisions, notes on sequencing coverage, and any data not yet extracted
 - changelog.md tracks updates and corrections made to the study over time
 
 ---

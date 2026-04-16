@@ -1,0 +1,3 @@
+﻿study_id,survey_id,country_name,site_name,latitude,longitude,location_method,location_notes,collection_start,collection_end,collection_day,time_method,time_notes
+s0002_ayelaw_eth2023,s0002_Gondar_Zuria,ETHIOPIA,Gondar Zuria,12.6739,37.3435,,,2022-01-01,2023-01-01,2022-07-02,imputed as midpoint of collection range,
+s0002_ayelaw_eth2023,s0002_Tach_Armachiho,ETHIOPIA,Tach Armachiho,13.02,37.166666,,,2022-01-01,2023-01-01,2022-07-02,imputed as midpoint of collection range,
