@@ -7,3 +7,6 @@
 
 # Ignore all private studies
 studies/private/
+
+# Option to ignore stuff inside individual study folders
+studies/**/ignore/
