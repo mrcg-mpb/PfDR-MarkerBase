@@ -44,32 +44,29 @@ You can have a look at an example README file [here](studies/public/PMID_4066631
 
 ## Building the combined data object
 
-The `R/` directory contains a simple helper script for combining all study folders into a single dataset. This script reads in each study, performs validation via the [STAVE](https://mrc-ide.github.io/STAVE/) framework, and returns a unified STAVE object that can be used for analysis. This process can either include or exclude the `private/` folder as you wish.
+The `R/build_stave_object.R` script contains a helper function that combines all study folders into a single dataset. As part of this process, the function checks that each study is correctly formatted using the [STAVE](https://mrc-ide.github.io/STAVE/) framework, and then returns a combined STAVE object that can be used for analysis. The build can either include or exclude studies stored inside the `private/` folder.
 
 For example:
 
-```
+```r
 # import the helper functions
 source("R/build_stave_object.R")
 
-# build the STAVE object, excluding data in private folder
+# build the STAVE object, excluding private studies
 s_public <- build_stave_object(include_private = FALSE)
 ```
+
+All contributed studies need to pass these checks before they can be merged into the repository. If you are comfortable using R, you may find it useful to run the build locally before opening a pull request.
+
+However, this is completely optional. Every pull request automatically runs the same checks using GitHub Actions. If something is wrong with the formatting or data structure, the pull request will fail and display an error message explaining what needs to be fixed.
 
 ---
 
 ## Automated validation via GitHub Actions
 
-The repository includes a GitHub Actions workflow that automatically validates all contributed studies whenever a pull request is opened or updated.
+Whenever a pull request is opened or updated, GitHub Actions automatically checks all studies inside `studies/public/`. This process builds the combined STAVE object, runs validation checks, and reports any problems directly within the pull request.
 
-This workflow:
-
-- reads all study folders inside `studies/public/`
-- builds the combined STAVE object
-- performs schema and consistency checks
-- reports any validation errors directly within the pull request
-
-Contributors therefore do not need to install R or run validation locally before submitting a pull request, although local validation remains possible for advanced users.
+Note that no checks are performed on studies inside `studies/private`, as these are invisible to the repos. If you have local private studies then you'll need to check the format yourself.
 
 ---
 
@@ -106,3 +103,5 @@ The curated dataset is made available under the Creative Commons Attribution 4.0
 ## Disclaimer
 
 The data are provided “as is”, without warranty of any kind. See the license files for details.
+
+(test change)
