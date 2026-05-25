@@ -25,7 +25,8 @@ jobs:
             "remotes",
             "yaml",
             "readr",
-            "dplyr"
+            "dplyr",
+            "here"
           ), repos = "https://cloud.r-project.org")'
 
           Rscript -e 'remotes::install_github("mrc-ide/STAVE", ref = "v2.0.2")'
