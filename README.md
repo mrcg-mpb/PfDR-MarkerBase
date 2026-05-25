@@ -91,6 +91,16 @@ We welcome contributions to help build this shared resource. The preferred way t
 
 ---
 
+## Citation and reuse
+
+PfDR-MarkerBase is intended as a community resource. If you use this repository in analyses, reports, or publications, please cite the repository and include the specific release or commit used.
+
+Each study folder retains metadata linking back to the original data source and publication. Users of this resource are encouraged to acknowledge and cite the original studies most relevant to their analyses where appropriate.
+
+Forking the repository is encouraged as part of the contribution workflow. However, official releases and maintained versions of PfDR-MarkerBase are provided through the canonical repository at [https://github.com/mrcg-mpb/PfDR-MarkerBase](https://github.com/mrcg-mpb/PfDR-MarkerBase).
+
+---
+
 ## Licensing
 
 All code in this repository is licensed under the MIT License.
